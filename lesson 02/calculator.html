@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Awesome Calcupotato of life</title>
+  <style>  body {background-color: #00ffa3;}
+ </style>
+  <script> 
+  function functionReset(){
+    document.getElementById("calcupotato").reset();
+    }
+   function myFunction(){
+   		var form = document.getElementById('calcupotato');
+        var numOne = parseInt(form.elements[0].value);
+        var op = form.elements[1].value;
+        var numTwo = parseInt(form.elements[2].value);
+        var answer = 0;      
+        if (op == "plus"){
+        answer = numOne + numTwo;
+   } else if (op == "minus"){
+   answer = numOne - numTwo;
+   } else if (op == "divide"){
+   answer = numOne / numTwo;
+   } else if (op == "multiply"){
+   answer = numOne * numTwo;
+   }
+           document.getElementById("answer").innerHTML = answer;
+    }
+ </script>  
+</head>
+<body>
+
+<center><h1>Calcupotato of life</h1></center>
+
+ <form id ="calcupotato">
+    <center><input id ="numberone" type = "text" name = "fnumber">
+  <select id="op">
+  <option value="plus">+</option>
+  <option value="minus">-</option>
+  <option value="divide">/</option>
+  <option value="multiply">x</option>
+  </select>
+    <input id ="numbertwo" type = "text" name = "lnumber"></center>
+   <br>
+    <center><input type = "button" onclick = "functionReset()" value = "           Reset           "></center>
+   </form>
+    <center><button onclick = "myFunction()">Click to get answer</button></center>
+  <font size="7"><center><p id="answer"> </p></center></font>
+   <center><a href="calculator2.html">Second Calculator</a></center>
+   </body>
+</html>

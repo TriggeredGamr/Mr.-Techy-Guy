@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Awesome Fahrenheit converter of life</title>
+  <style>  body {background-color: #00ffa3;}
+ </style>
+  <script> 
+  function functionReset(){
+    document.getElementById("tempF").value = "";
+    }
+   function myFunction(){
+	var tempF = parseInt(document.getElementById("tempF").value);
+	var answer = ((tempF - 32) / 1.8);
+	document.getElementById("answer").innerHTML = answer;
+    }
+ </script>  
+</head>
+<body>
+
+<center><h1>Fahrenheit to Celsius</h1></center>
+
+    <center><input id ="tempF" type = "text" name = "fnumber">
+   <br>
+    <center><input type = "button" onclick = "functionReset()" value = "           Reset           "></center>
+    <center><button onclick = "myFunction()">Click to get answer</button></center>
+  <font size="7"><center><p id="answer"> </p></center></font>
+   <center><a href="calculator.html">First Calculator</a></center>
+   </body>
+</html>
+
+
